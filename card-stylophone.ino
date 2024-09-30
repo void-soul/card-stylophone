@@ -1,31 +1,26 @@
 /*
-
-该项目使用基本音调功能来演奏音符。
-
-在下面的主循环函数中，我们可以通过更改未注释的函数来选择你想要的按键行为。如果你了解基本编程，还可以编写自己的！
-
-该项目使用函数tone生成声音，使用pitches.h库定义不同音符的频率。该代码还包括一个称为readCapacitivePin的函数，用于测量引脚上的电容。
-
+This project uses the basic pitch function to play notes.
+In the main loop function below, we can choose the key behaviour you want by changing the unannotated function.
+You can also write your own if you understand basic programming!
+The project uses the function tone to generate sounds,
+using the pitches.h library to define the frequencies of the different notes.
+The code also includes a function called readCapacitivePin to measure the capacitance on the pins.
 */
 #include "pitches.h"
 
-int notelength  = 20;//音符长度
-int outputpin   = 9;//音频输出引脚
-int capacitance = 8;//电容测量引脚d:\data\Desktop\card-stylophone\pitches.h
+int notelength  = 20;//Note length
+int outputpin   = 9;//Audio Output Pins
+int capacitance = 8;//Capacitance Measurement Pins
 
 void setup(void)
 {  
-  tone(outputpin, NOTE_A4, 500); //初始化 Arduino 板并发出蜂鸣声以表明设备正在工作。
+  tone(outputpin, NOTE_A4, 500); //Initialise the Arduino board and beep to indicate that the device is working.
 }
 
 /////////////////////////////////////////////////////////////////////////////////////
 void loop(void)
 {
-
-
-
- aeoliancap();   
-
+ aeoliancap();
 }
 /////////////////////////////////////////////////////////////////////////////////////
 
